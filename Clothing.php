@@ -48,6 +48,11 @@
               <div class="product-button">
                 <button>Add to cart</button>
               </div>
+             
+               <!-- <div class="col-md-3 col-sm-6 col-6">
+              <div class="product-img">
+                <img src="img/g3.png" width="100%" class="img-fluid">
+              </div> -->
               <div class="details text-center">
                 <h6>Arcu vitae imperdiet simply</h6> 
                 <span>$235.00</span>               
