@@ -1,9 +1,16 @@
 <?php
- include'header.php';
- include'lib/connection.php';
- $name=$_POST['name'];
- $sql = "SELECT * FROM product where name='$name'";
- $result = $conn -> query ($sql);
+// Include the header and connection files
+include 'header.php';
+include 'lib/connection.php';
+
+// Get the 'name' value from the POST request
+$name = $_POST['name'];
+
+// Prepare the SQL query to fetch products with the specified name
+$sql = "SELECT * FROM product where name='$name'";
+
+// Execute the query
+$result = $conn->query($sql);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -12,47 +19,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- Link to the CSS file for styling the page -->
     <link rel="stylesheet" href="css/pending_orders.css">
-
 </head>
 <body>
-
 <div class="container pendingbody">
   <h5>Search Result</h5>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">Image</th>
-      <th scope="col">Name</th>
-      <th scope="col">Catagory</th>
-      <th scope="col">Description</th>
-      <th scope="col">Quantity</th>
-      <th scope="col">Price</th>
-    </tr>
-  </thead>
-  <tbody>
-  <?php
-          if (mysqli_num_rows($result) > 0) {
-            // output data of each row
-            while($row = mysqli_fetch_assoc($result)) {
-              ?>
-    <tr>
-      <td><img src="admin/product_img/<?php echo $row['imgname']; ?>" style="width:50px;"></td>
-      <td><?php echo $row["name"] ?></td>
-      <td><?php echo $row["catagory"] ?></td>
-      <td><?php echo $row["description"] ?></td>
-      <td><?php echo $row["quantity"] ?></td>
-      <td><?php echo $row["Price"] ?></td>
-    </tr>
-    <?php 
-    }
-        } 
-        else 
-            echo "0 results";
+  <!-- Table to display the search results -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Category</th>
+        <th scope="col">Description</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+      </tr>
+    </thead>
+    <tbody>
+    <?php
+    // Check if there are any results
+    if (mysqli_num_rows($result) > 0) {
+      // Loop through each row in the result set
+      while($row = mysqli_fetch_assoc($result)) {
         ?>
-  </tbody>
-</table>
+        <tr>
+          <!-- Display the product image -->
+          <td><img src="admin/product_img/<?php echo $row['imgname']; ?>" style="width:50px;"></td>
+          <!-- Display the product name -->
+          <td><?php echo $row["name"] ?></td>
+          <!-- Display the product category -->
+          <td><?php echo $row["catagory"] ?></td>
+          <!-- Display the product description -->
+          <td><?php echo $row["description"] ?></td>
+          <!-- Display the product quantity -->
+          <td><?php echo $row["quantity"] ?></td>
+          <!-- Display the product price -->
+          <td><?php echo $row["Price"] ?></td>
+        </tr>
+        <?php 
+      }
+    } else {
+      // Display a message if no results are found
+      echo "0 results";
+    }
+    ?>
+    </tbody>
+  </table>
 </div>
-    
 </body>
 </html>
