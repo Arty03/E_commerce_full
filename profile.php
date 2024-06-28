@@ -13,6 +13,7 @@ else
 {
    header("location:login.php");
 }
+// db connection
 include'lib/connection.php';
 $k=$_SESSION['userid'];
 $sql = "SELECT * FROM orders where userid='$k'";
