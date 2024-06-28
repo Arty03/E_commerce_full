@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Fashion</title>
-	<meta charset="UTF-8">
-    <meta name="description" content="test">
-    <meta name="keywords" content="HTML, CSS, BOOTSTRAP">
-    <meta name="author" content="Anik">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
-    <!--font-family: 'Raleway', sans-serif;-->
-    <link rel="favicon" type="text/css" href="#favicon">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+<title>Fashion</title>
+<meta charset="UTF-8">
+<meta name="description" content="test">
+<meta name="keywords" content="HTML, CSS, BOOTSTRAP">
+<meta name="author" content="Anik">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap" rel="stylesheet">
+<!--font-family: 'Raleway', sans-serif;-->
+<link rel="favicon" type="text/css" href="#favicon">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 </head>
 
