@@ -13,11 +13,13 @@ else
 {
    header("location:login.php");
 }
+// connect db
  include'header.php';
  include'lib/connection.php';
  $result=null;
 if (isset($_POST['submit'])) 
 {
+   // take file and information from input
     $name=$_POST['name'];
     $catagory=$_POST['catagory'];
     $description=$_POST['description'];
