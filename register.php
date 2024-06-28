@@ -1,5 +1,5 @@
 <?php
-
+// connect database
 include "lib/connection.php";
 $result = null;
   if (isset($_POST['u_submit'])) 
